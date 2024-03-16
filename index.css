@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+    background: #003566;
+}
+.sky {
+    margin: 20px;
+    width: 100%;
+    border-radius: 50%;
+    background: rgb(122, 181, 236);
+    height: 200px;
+    width: 300px;
+    overflow: hidden;
+}
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cloud {
+    font-size: 2rem;
+    animation: clouds 3.5s linear infinite;
+    color: white;
+}
+.cloud-two {
+    font-size: 2rem;
+    animation: clouds 2.5s linear infinite;
+    color: white;
+}
+.rocket {
+    rotate: 30deg;
+    animation: fly 2s linear infinite;
+    font-size: 2rem;
+}
+.text {
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    transform: translateY(-10px);
+    animation: flash 1s linear infinite;
+}
+@keyframes clouds {
+    0% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+@keyframes fly {
+    0% {
+        transform: translate(0, 0px);
+    }
+    25% {
+        transform: translate(0, 10px);
+    }
+    50% {
+        transform: translate(0, 0px);
+    }
+    75% {
+        transform: translate(0, -10px);
+    }
+    100% {
+        transform: translate(0, 0px);
+    }
+}
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
